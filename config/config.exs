@@ -32,8 +32,8 @@ use Mix.Config
 config :music_db, :ecto_repos, [MusicDB.Repo]
 
 config :music_db, MusicDB.Repo,
-  username: "jay",
-  password: "bungholio8",
+  username: "beavis",
+  password: "Buttface99",
   database: "music_db",
   hostname: "localhost",
   # this is not normally needed - we put it here to support an example of

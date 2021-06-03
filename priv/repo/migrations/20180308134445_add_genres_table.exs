@@ -15,6 +15,6 @@ defmodule MusicDB.Repo.Migrations.AddGenresTable do
       add :wiki_tag, :string, null: true
       timestamps null: true
     end
-    create index(:genres, :name, unique: true)
+    create unique_index(:genres, :name)
   end
 end
