@@ -30,6 +30,7 @@ use Mix.Config
 #
 
 config :music_db, :ecto_repos, [MusicDB.Repo]
+# config :music_db, MusicDB.Repo, migration_timestamps: [type: :utc_datetime]
 
 config :music_db, MusicDB.Repo,
   username: "beavis",

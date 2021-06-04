@@ -7,6 +7,8 @@ defmodule MusicDB.Repo.Migrations.AddCompositionsTable do
       add :year, :integer, null: false
       add :artist_id, references("artists"), null: false
       timestamps()
+      # timestamps(inserted_at: :created_at, updated_at: :changes_at,
+      #   type: :utc_datetime)
     end
   end
 end

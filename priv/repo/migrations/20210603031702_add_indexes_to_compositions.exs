@@ -3,5 +3,6 @@ defmodule MusicDB.Repo.Migrations.AddIndexesToCompositions do
 
   def change do
     create index("compositions", :title)
+    create index("compositions", :year)
   end
 end
