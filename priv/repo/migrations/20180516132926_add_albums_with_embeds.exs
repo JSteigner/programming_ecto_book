@@ -6,16 +6,28 @@
 # We make no guarantees that this code is fit for any purpose.
 # Visit http://www.pragmaticprogrammer.com/titles/wmecto for more book information.
 #---
+# defmodule MusicDB.Repo.Migrations.AddAlbumsWithEmbeds do
+#   use Ecto.Migration
+
+#   def change do
+#     create table("albums_with_embeds") do
+#       add(:title, :string)
+#       if MusicDB.Repo.using_postgres?() do
+#       add(:artist, :jsonb)
+#       add(:tracks, {:array, :jsonb}, default: [])
+#       end
+#     end
+#   end
+# end
+
 defmodule MusicDB.Repo.Migrations.AddAlbumsWithEmbeds do
   use Ecto.Migration
 
   def change do
     create table("albums_with_embeds") do
       add(:title, :string)
-      if MusicDB.Repo.using_postgres?() do
       add(:artist, :jsonb)
       add(:tracks, {:array, :jsonb}, default: [])
-      end
     end
   end
 end
